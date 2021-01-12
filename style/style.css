@@ -12,6 +12,7 @@ body {
   height: 1076px;
   background: #FFFFFF;
   font-family: Rubik, Arial;
+  overflow-x: hidden;
 }
 
 .top {
@@ -78,6 +79,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 .text__container {
@@ -353,19 +355,6 @@ body {
   }
   .para__container p {
     padding: 10px;
-  }
-  .box__container {
-    width: 80%;
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow-x: hidden;
   }
   .box {
     min-width: 100%;
