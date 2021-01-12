@@ -1,3 +1,14 @@
+// Importing Rubik font-family
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+// Variables
+$font: Rubik, Arial;
+$background: #FFFFFF;
+$cardHeadingColor: #2D3236;
+$cardBodyColor:#808080;
+$arrowColor: #28A9E0;
+$arrowHoverColor: rgba(255, 255, 255, 0.05);
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +16,451 @@
 }
 
 body {
-    width: 1920px;
-    height: 1076px;
     position: relative;
+    width: 100%;
+    height: 1076px;
+    background: $background;
+    font-family: $font;
+}
+
+// Top header styling
+.top {
+    position: absolute;
+    width: 100%;
+    height: 84px;
+    left: 0px;
+    top: 0px;
+    background: $background;
+}
+
+// Logo styling
+.logo__container {
+    position: absolute;
+    width: 160px;
+    height: 38px;
+    left: 372px;
+    top: 23px;
+}
+
+.logo__container img {
+    width: 100%;
+    height: 100%;
+}
+
+// Content 1 styling
+.content__1 {
+    position: absolute;
+    width: 100%;
+    height: 483px;
+    left: 0px;
+    top: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+// Content 1 background
+.content__1__bg {
+    position: absolute;
+    width: 100%;
+    height: 466px;
+    left: 0px;
+    top: 84px;
+    /* Blue */
+    background: #215398;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text__container {
+    text-align: center;
+}
+
+// Header container styling
+.header__container {
+    text-align: center;
+    width: 100%;
+    height: 52px;
+}
+
+.header__container h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 52px;
+    color: $background;
+}
+
+// Para container styling
+.para__container {
+    width: 100%;
+    text-align: center;
+}
+
+.para__container p {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    text-align: center;
+    /* white */
+    color: #FFFFFF;
+}
+
+// Boxs' container styling
+.box__container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Boxs' styling
+.box {
+    width: 332px;
+    height: 228px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.02));
+    // white
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+// Frame and frame content styling
+.frame {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 80%;
+    height: 114.01px;
+}
+
+.frame h3 {
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 78.95%;
+    /* H3 */
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    text-align: center;
+    color: $cardHeadingColor;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+.frame p {
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 31.58%;
+    bottom: 47.37%;
+    /* body */
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+    /* identical to box height, or 160% */
+    text-align: center;
+    /* grayText */
+    color: $cardBodyColor;
+}
+
+.fas {
+    width: 100%;
+    height: 100%;
+    color: $arrowColor;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow__container {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow__container:hover {
+    background: $arrowHoverColor;
+    border-radius: 100%;
+}
+
+// Magenta center dot styling
+.dot {
+    position: relative;
+    z-index: 5;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    /* magenta */
+    background: #FF3859;
+    box-shadow: 0px 4px 4px rgba(255, 56, 89, 0.2);
+}
+
+// Content 2 section styling
+.content__2 {
+    position: absolute;
+    width: 100%;
+    height: 526px;
+    left: 0px;
+    top: 550px;
+    background: #F1F6FC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+// Content 2 text styling
+.content__2 .text__container {
+    margin-top: 2rem;
+}
+
+.content__2 h2 {
+    /* Heading */
+    width: 100%;
+    height: 52px;
+    /* H2 */
+    font-family: $font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 52px;
+    /* identical to box height, or 130% */
+    text-align: center;
+    /* blackText */
+    color: $cardHeadingColor;
+}
+
+.content__text {
+    width: 685px;
+    height: 32px;
+    /* body-big */
+    font-family: $font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    text-align: center;
+    /* blackText */
+    color: $cardHeadingColor;
+}
+
+.content__2 h3 {
+    /* H */
+    width: 100%;
+    height: 30px;
+    /* H2 */
+    font-family: $font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    /* identical to box height, or 100% */
+    text-align: center;
+    /* blackText */
+    color: $cardHeadingColor;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    // Logo styling
+    .logo__container {
+        left: 10px;
+    }
+    
+    // Content 1 styling
+    .content__1 {
+        // position: absolute;
+        // width: 100%;
+        // height: 483px;
+        // left: 0px;
+        // top: 84px;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: flex-end;
+    }
+    
+    // Content 1 background
+    .content__1__bg {
+        // position: absolute;
+        // width: 100%;
+        // height: 466px;
+        // left: 0px;
+        // top: 84px;
+        // /* Blue */
+        // background: #215398;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-evenly;
+        // align-items: center;
+    }
+    
+    // Header container styling
+    .header__container {
+        // text-align: center;
+        // width: 100%;
+        // height: 52px;
+    }
+    
+    .header__container h1 {
+        // font-family: Rubik;
+        // font-style: normal;
+        // font-weight: 300;
+        // font-size: 40px;
+        // line-height: 52px;
+        // color: $background;
+    }
+    
+    // Para container styling
+    .para__container {
+        // width: 80%;
+        // text-align: center;
+    }
+    
+    .para__container p {
+        // font-family: Rubik;
+        // font-style: normal;
+        // font-weight: 300;
+        // font-size: 20px;
+        // line-height: 32px;
+        // /* identical to box height, or 160% */
+        // text-align: center;
+        // /* white */
+        // color: #FFFFFF;
+        padding: 10px
+    }
+    
+    // Boxs' container styling
+    .box__container {
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    
+    // Boxs' styling
+    .box {
+        // width: 332px;
+        // height: 228px;
+        // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.02));
+        // // white
+        // background: #FFFFFF;
+        // display: flex;
+        // justify-content: center;
+        // margin: 1rem;
+        min-width: 100%;
+    }
+    
+    // Frame and frame content styling
+    .frame {
+        // margin-top: 1.5rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        // align-items: center;
+        // padding: 0px;
+        // width: 80%;
+        // height: 114.01px;
+    }
+    
+    .frame h3 {
+        // position: static;
+        // left: 0%;
+        // right: 0%;
+        // top: 0%;
+        // bottom: 78.95%;
+        // /* H3 */
+        // font-family: Rubik;
+        // font-style: normal;
+        // font-weight: 300;
+        // font-size: 20px;
+        // line-height: 24px;
+        // /* identical to box height */
+        // text-align: center;
+        // color: $cardHeadingColor;
+        // /* Inside Auto Layout */
+        // flex: none;
+        // order: 0;
+        // flex-grow: 0;
+        // margin: 0px 12px;
+    }
+    
+    .frame p {
+        // position: static;
+        // left: 0%;
+        // right: 0%;
+        // top: 31.58%;
+        // bottom: 47.37%;
+        // /* body */
+        // font-family: Rubik;
+        // font-style: normal;
+        // font-weight: 300;
+        // font-size: 15px;
+        // line-height: 24px;
+        // /* identical to box height, or 160% */
+        // text-align: center;
+        // /* grayText */
+        // color: $cardBodyColor;
+    }
+    
+    .content__2 {
+        height: 100%;
+    }
+
+    // Content 2 text styling
+    .content__2 .text__container {
+        margin-top: 0rem;
+    }
+
+    .content__text {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .content__2 .box__container {
+        flex-direction: column;
+    }
 }
