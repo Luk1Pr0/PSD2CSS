@@ -9,12 +9,10 @@ const nextBtn = document.querySelector('.arrow--right');
 let counter = 0;
 const boxSize = boxes[0].clientWidth;
 
-function initialSlide() {
-    boxContainer.style.transform = 'translateX(' + (-boxSize * counter) + 'px)';
-}
-
+// Set transition and determine which way to slide the boxes
 function slide(direction) {
     boxContainer.style.transition = `transform 0.5s ease-in-out`;
+    // If direction is prev, then display the left box else display the box on the right
     if (direction === 'prev') {
         if (counter <= -1) return;
         counter--;
