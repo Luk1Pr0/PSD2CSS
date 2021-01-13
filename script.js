@@ -7,6 +7,8 @@ const prevBtn = document.querySelector('.arrow--left');
 const nextBtn = document.querySelector('.arrow--right');
 
 let counter = 0;
+let startPos = 0;
+let endPos = 0;
 const boxSize = boxes[0].clientWidth;
 
 // Set transition and determine which way to slide the boxes
@@ -24,7 +26,27 @@ function slide(direction) {
     }
 }
 
+// When user swipes either left or right then slide the boxes to given direction
+function swipe() {
+    if (startPos < endPos) {
+        slide('prev');
+    } else {
+        slide('next');
+    }
+}
+
 // Event listeners (not able to use arrow functions as they are not supported in IE11)
 prevBtn.addEventListener('click', function () { slide('prev') });
 nextBtn.addEventListener('click', function () { slide('next') });
 window.addEventListener('resize', function () { location.reload() });
+
+// Touch event listener 
+boxContainer.addEventListener('touchstart', function (e) {
+    startPos = e.changedTouches[0].clientX;
+    swipe();
+});
+
+boxContainer.addEventListener('touchend', function (e) {
+    endPos = e.changedTouches[0].clientX;
+    swipe();
+})
