@@ -45,13 +45,17 @@ prevBtn.addEventListener('click', function () { slide('prev') });
 nextBtn.addEventListener('click', function () { slide('next') });
 window.addEventListener('resize', function () { location.reload() });
 
-// Touch event listener
-boxContainer.addEventListener('touchstart', function (e) {
-    startPos = e.changedTouches[0].clientX;
-    swipe();
+// Touch event listeners added for each box
+boxes.forEach(box => {
+    box.addEventListener('touchstart', function (e) {
+        startPos = e.changedTouches[0].clientX;
+        swipe();
+    });
 });
 
-boxContainer.addEventListener('touchend', function (e) {
-    endPos = e.changedTouches[0].clientX;
-    swipe();
-})
+boxes.forEach(box => {
+    box.addEventListener('touchend', function (e) {
+        endPos = e.changedTouches[0].clientX;
+        swipe();
+    });
+});
