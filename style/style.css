@@ -134,6 +134,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .box {
@@ -222,7 +224,7 @@ body {
   height: 100%;
   color: #28A9E0;
   position: relative;
-  z-index: 5;
+  z-index: 10;
   text-align: center;
   cursor: pointer;
   display: -webkit-box;

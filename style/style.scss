@@ -125,6 +125,8 @@ body {
     justify-content: space-around;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 // Boxs' styling
@@ -197,7 +199,7 @@ body {
     height: 100%;
     color: $arrowColor;
     position: relative;
-    z-index: 5;
+    z-index: 10;
     text-align: center;
     cursor: pointer;
     display: flex;
