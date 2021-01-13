@@ -28,11 +28,16 @@ function slide(direction) {
 
 // When user swipes either left or right then slide the boxes to given direction
 function swipe() {
-    if (startPos < endPos) {
-        slide('prev');
-    } else {
-        slide('next');
+    // If end position is not 0 then allow swipe
+    if (endPos != 0) {
+        if (endPos > startPos) {
+            slide('prev');
+        } else {
+            slide('next');
+        }
     }
+    // Reset the endPos to 0 so that the swipe can happen again
+    endPos = 0;
 }
 
 // Event listeners (not able to use arrow functions as they are not supported in IE11)
@@ -40,7 +45,7 @@ prevBtn.addEventListener('click', function () { slide('prev') });
 nextBtn.addEventListener('click', function () { slide('next') });
 window.addEventListener('resize', function () { location.reload() });
 
-// Touch event listener 
+// Touch event listener
 boxContainer.addEventListener('touchstart', function (e) {
     startPos = e.changedTouches[0].clientX;
     swipe();
