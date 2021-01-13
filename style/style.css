@@ -80,6 +80,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow-x: hidden;
+  z-index: 2;
 }
 
 .text__container {
@@ -93,7 +94,7 @@ body {
 }
 
 .header__container h1 {
-  font-family: Rubik;
+  font-family: Rubik, Arial;
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
@@ -107,7 +108,7 @@ body {
 }
 
 .para__container p {
-  font-family: Rubik;
+  font-family: Rubik, Arial;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -120,12 +121,16 @@ body {
 
 .box__container {
   width: 80%;
+  width: auto;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -143,11 +148,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem;
+  margin: 0 1rem;
 }
 
 .frame {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +178,7 @@ body {
   top: 0%;
   bottom: 78.95%;
   /* H3 */
-  font-family: Rubik;
+  font-family: Rubik, Arial;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -199,8 +204,9 @@ body {
   right: 0%;
   top: 31.58%;
   bottom: 47.37%;
+  width: 100%;
   /* body */
-  font-family: Rubik;
+  font-family: Rubik, Arial;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -346,7 +352,7 @@ body {
   color: #2D3236;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
   body {
     overflow-x: hidden;
   }
@@ -355,6 +361,9 @@ body {
   }
   .para__container p {
     padding: 10px;
+  }
+  .box__container {
+    width: 80%;
   }
   .box {
     min-width: 100%;
@@ -375,6 +384,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .content__2 .box {
+    margin: 1rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

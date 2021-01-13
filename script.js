@@ -11,7 +11,7 @@ const boxSize = boxes[0].clientWidth;
 
 // Set transition and determine which way to slide the boxes
 function slide(direction) {
-    boxContainer.style.transition = `transform 0.5s ease-in-out`;
+    boxContainer.style.transition = 'transform 0.5s ease-in-out';
     // If direction is prev, then display the left box else display the box on the right
     if (direction === 'prev') {
         if (counter <= -1) return;
@@ -24,6 +24,7 @@ function slide(direction) {
     }
 }
 
-// Event listeners
-prevBtn.addEventListener('click', () => slide('prev'));
-nextBtn.addEventListener('click', () => slide('next'));
+// Event listeners (not able to use arrow functions as they are not supported in IE11)
+prevBtn.addEventListener('click', function () { slide('prev') });
+nextBtn.addEventListener('click', function () { slide('next') });
+window.addEventListener('resize', function () { location.reload() });

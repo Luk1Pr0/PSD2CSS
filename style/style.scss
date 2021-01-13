@@ -75,6 +75,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     overflow-x: hidden;
+    z-index: 2;
 }
 
 .text__container {
@@ -89,7 +90,7 @@ body {
 }
 
 .header__container h1 {
-    font-family: Rubik;
+    font-family: $font;
     font-style: normal;
     font-weight: 300;
     font-size: 40px;
@@ -104,7 +105,7 @@ body {
 }
 
 .para__container p {
-    font-family: Rubik;
+    font-family: $font;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -118,9 +119,11 @@ body {
 // Boxs' container styling
 .box__container {
     width: 80%;
+    width: auto;
     height: auto;
     display: flex;
     justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -133,12 +136,12 @@ body {
     background: #FFFFFF;
     display: flex;
     justify-content: center;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 
 // Frame and frame content styling
 .frame {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -155,7 +158,7 @@ body {
     top: 0%;
     bottom: 78.95%;
     /* H3 */
-    font-family: Rubik;
+    font-family: $font;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -176,8 +179,9 @@ body {
     right: 0%;
     top: 31.58%;
     bottom: 47.37%;
+    width: 100%;
     /* body */
-    font-family: Rubik;
+    font-family: $font;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -299,7 +303,7 @@ body {
     color: $cardHeadingColor;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     body {
         overflow-x: hidden;
     }
@@ -311,6 +315,10 @@ body {
     
     .para__container p {
         padding: 10px
+    }
+
+    .box__container {
+        width: 80%;
     }
     
     // Boxs' styling
@@ -335,5 +343,9 @@ body {
 
     .content__2 .box__container {
         flex-direction: column;
+    }
+
+    .content__2 .box {
+        margin: 1rem 0;
     }
 }
