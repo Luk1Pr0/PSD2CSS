@@ -320,16 +320,12 @@ body {
     }
 
     .box__container {
-        width: 100%;
-        position: relative;
-        z-index: 5;
+        width: 80%;
     }
     
     // Boxs' styling
     .box {
-        min-width: 90%;
-        position: relative;
-        z-index: 4;
+        min-width: 100%;
     }
     
     .content__2 {
