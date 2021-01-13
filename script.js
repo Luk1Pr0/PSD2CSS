@@ -43,7 +43,6 @@ function swipe() {
 // Event listeners (not able to use arrow functions as they are not supported in IE11)
 prevBtn.addEventListener('click', function () { slide('prev') });
 nextBtn.addEventListener('click', function () { slide('next') });
-// window.addEventListener('resize', function () { location.reload() });
 
 // Touch event listeners added for each box (no arrow functions as IE11 doesn't support them)
 boxes.forEach(function (box) {
